@@ -1,0 +1,392 @@
+@import "./src/fonts/fonts.css";
+
+:root {
+  font-size: 10px;
+  --dark-primary-color: #333333;
+  --light-primary-color: #f8f8f8;
+  --primary-color: var(--dark-primary-color);
+  --screen-color: #a7af7c;
+  --screen-light-color: #bebebe;
+  --clear-color: #f00000;
+  --clear-deep-color: #d20000;
+  --equal-color: #2196f3;
+  --equal-deep-color: #1479c9;
+  --delete-color: #08979c;
+  --delete-deep-color: #006d75;
+  --transition-color: #ffffff5c;
+
+  --span-size: 10rem;
+  --gap-size: calc(var(--span-size) / 3);
+  --column-gap-size: var(--gap-size);
+  --row-gap-size: calc(var(--gap-size) * 4 / 5);
+  --dark-calculator-background-shadow: 2.5rem 2.5rem 7.5rem rgba(0, 0, 0, 0.25), 1rem 1rem 7rem rgba(0, 0, 0, 0.25),
+    inset -0.5rem -0.5rem 1.5rem rgba(0, 0, 0, 0.5), inset 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  --light-calculator-background-shadow: 2.5rem 2.5rem 7.5rem rgba(0, 0, 0, 0.15), 1rem 1rem 7rem rgba(0, 0, 0, 0.15),
+    inset -0.5rem -0.5rem 1.5rem rgba(0, 0, 0, 0.15), inset 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+
+  --light-text-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.25);
+  --dark-text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+
+  --text-area-width: calc(var(--span-size) * 4 + var(--gap-size) * 3);
+  --text-area-screen-shadow: inset 0.2rem 0.2rem 1rem var(--screen-light-color), inset -0.2rem -0.2rem 1rem #fff;
+
+  --light-span-color: rgb(250, 250, 250);
+  --light-span-deep-color: rgb(244, 244, 244);
+  --light-span-background: var(var(--light-span-color));
+  --light-span-background-linear: linear-gradient(var(--light-span-color), var(--light-span-deep-color));
+  --light-span-shadow: inset -0.8rem 0 0.8rem rgba(0, 0, 0, 0.15), inset 0 -0.8rem 0.8rem rgba(0, 0, 0, 0.25),
+    0 0 1rem 0.4rem rgba(0, 0, 0, 0.5), 1rem 2rem 2.5rem rgba(0, 0, 0, 0.4);
+
+  --dark-span-color: rgb(63, 63, 63);
+  --dark-span-deep-color: rgb(47, 47, 47);
+  --dark-span-background: var(--dark-span-color);
+  --dark-span-background-linear: linear-gradient(var(--dark-span-color), var(--dark-span-deep-color));
+  --dark-span-shadow: inset -0.8rem 0 0.8rem rgba(0, 0, 0, 0.15), inset 0 -0.8rem 0.8rem rgba(0, 0, 0, 0.25),
+    0 0 1rem 0.4rem rgba(0, 0, 0, 0.5), 1rem 2rem 2.5rem rgba(0, 0, 0, 0.4);
+
+  --image-size: 8rem;
+  --light-image-shadow: 0.2rem 0.2rem 0.4rem #fff, inset 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+  --light-image-active-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.15),
+    inset 0.2rem 0.2rem 0.4rem rgba(255, 255, 255, 0.15);
+  --dark-image-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.15), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.15);
+  --dark-image-active-shadow: 0.2rem 0.2rem 0.4rem #fff, inset 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+  --span-mousedown-shadow: inset -0.8rem 0 0.8rem rgba(0, 0, 0, 0.15), inset 0 -0.8rem 0.8rem rgba(0, 0, 0, 0.15),
+    0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+
+  --dark-span-before-border: 0.1rem solid var(--dark-primary-color);
+  --dark-span-before-deep-background: rgb(45, 45, 45);
+  --dark-span-before-background: rgb(77, 77, 77);
+  --dark-span-before-background-linear: linear-gradient(
+    90deg,
+    var(--dark-span-before-deep-background),
+    var(--dark-span-before-background)
+  );
+  --dark-span-before-box-shadow: -0.5rem -0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    -0.1rem -0.1rem 0.5rem 0.05rem rgba(255, 255, 255, 0.05), 1rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  --light-span-before-border: 0.1rem solid var(--light-primary-color);
+  --light-span-before-deep-background: rgb(230, 230, 230);
+  --light-span-before-background: rgb(239, 239, 239);
+  --light-span-before-background-linear: linear-gradient(
+    90deg,
+    var(--light-span-before-deep-background),
+    var(--light-span-before-background)
+  );
+  --light-span-before-box-shadow: -1rem -1rem 1rem rgba(255, 255, 255, 0.25), 1rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  --clear-before-background-linear: linear-gradient(120deg, var(--clear-color), var(--transition-color));
+  --delete-before-background-linear: linear-gradient(120deg, var(--delete-color), var(--transition-color));
+  --equal-before-background-linear: linear-gradient(120deg, var(--equal-color), var(--transition-color));
+}
+
+/* ====== 初始化 ====== */
+*,
+*::before,
+*::after {
+  /* 位置 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* 修饰 - 字体 */
+  font-family: monospace;
+  color: var(--dark-primary-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 修饰 - 样式 */
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+html,
+body {
+  /* 位置 */
+  width: 100vw;
+  min-height: 100vh;
+  /* 布局 */
+  display: grid;
+  place-items: center;
+  /* 修饰 */
+  background: var(--dark-primary-color);
+}
+
+/* ====== .calculator ====== */
+.calculator {
+  /* 位置*/
+  position: relative;
+  max-width: 80%;
+  /* 布局 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 12rem repeat(5, 1fr);
+  column-gap: var(--gap-size);
+  row-gap: var(--row-gap-size);
+  /* 修饰 */
+  padding: 6rem;
+  border-radius: 2rem;
+  box-shadow: var(--dark-calculator-background-shadow);
+  text-shadow: var(--dark-text-shadow);
+}
+
+/* ====== toggle ====== */
+.toggle {
+  /* 位置 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* 布局 */
+  display: grid;
+  place-items: center;
+}
+
+.toggle img {
+  /* 位置 */
+  position: relative;
+  width: var(--image-size);
+  height: var(--image-size);
+  top: calc(var(--image-size) / 2);
+  right: calc(var(--image-size) / 2);
+  /* 修饰 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.toggle img:nth-child(1) {
+  display: block;
+  filter: invert(1);
+  box-shadow: var(--light-image-shadow);
+}
+
+.toggle img:nth-child(1):active {
+  box-shadow: var(--light-image-active-shadow);
+}
+
+.toggle img:nth-child(2) {
+  display: none;
+  box-shadow: var(--dark-image-shadow);
+}
+
+.toggle img:nth-child(2):active {
+  box-shadow: var(--dark-image-active-shadow);
+}
+
+/* ====== #textarea ====== */
+#textarea {
+  /* 位置 */
+  position: relative;
+  width: var(--text-area-width);
+  /* 布局 - 本层 */
+  grid-column: span 4;
+  /* 布局 - 下层 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 修饰 */
+  border: none;
+  border-radius: 1rem;
+  background: var(--screen-color);
+  box-shadow: var(--text-area-screen-shadow);
+}
+
+#textarea input {
+  /* 位置 */
+  position: absolute;
+  width: 100%;
+  /* 修饰 - 整体 */
+  padding: 0 1rem;
+  background: none;
+  border: none;
+  /* 修饰 - 字体 */
+  font-family: "Chakra";
+  font-size: 4.5rem;
+  line-height: 1em;
+  text-align: right;
+  /* 修饰 - 特性 */
+  outline: none;
+}
+
+#textarea input:nth-child(1) {
+  opacity: 0;
+  display: none;
+}
+
+/* ====== .calculator span ====== */
+.calculator span {
+  /* 位置 */
+  position: relative;
+  width: var(--span-size);
+  height: var(--span-size);
+  /* 布局 */
+  display: grid;
+  place-items: center;
+  /* 修饰 - 整体 */
+  background: var(--dark-span-background-linear);
+  box-shadow: var(--dark-span-shadow);
+  /* 修饰 - 边框 */
+  border-radius: 1rem;
+  /* 修饰 - 特性 */
+  cursor: pointer;
+}
+
+.calculator span.mousedown {
+  transform: translateY(0.3rem);
+  box-shadow: var(--span-mousedown-shadow);
+}
+
+.calculator span#clear {
+  grid-column: span 2;
+  width: 100%;
+  background: var(--clear-deep-color);
+}
+
+.calculator span#plus {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.calculator span#delete {
+  background: var(--delete-deep-color);
+}
+
+.calculator span#equal {
+  background: var(--equal-deep-color);
+}
+
+/* ====== .calculator before ====== */
+.calculator span::before {
+  /* 位置 */
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  bottom: 1rem;
+  right: 1.2rem;
+  /* 布局 */
+  display: grid;
+  place-items: center;
+  /* 修饰 - 整体*/
+  background: var(--dark-span-before-background-linear);
+  /* 修饰 - 字体 */
+  color: var(--light-primary-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  /* 修饰 - 边框 */
+  border-top: var(--dark-span-before-border);
+  border-bottom: var(--dark-span-before-border);
+  border-left: var(--dark-span-before-border);
+  box-shadow: var(--dark-span-before-box-shadow);
+  border-radius: 1rem;
+  /* 修饰 - 特性 */
+  content: "";
+}
+
+/* 让 gsap 的 before 权限低于这里即可锁定这里面的项目 */
+.calculator span#clear::before {
+  background: var(--clear-before-background-linear);
+  border: none;
+}
+
+.calculator span#delete::before {
+  background: var(--delete-before-background-linear);
+  border: none;
+}
+
+.calculator span#equal::before {
+  background: var(--equal-before-background-linear);
+  border: none;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  font-size: 10rem;
+}
+
+.loading span {
+  color: var(--primary-color);
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--primary-color);
+  border-color: var(--primary-color) transparent var(--primary-color) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle {
+  display: none;
+}
+
+.calculator {
+  display: none;
+}
+
+@media (width <=1200px) or (height <=900px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media (width <=900px) or (height <=850px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (width <=780px) or (height <=800px) {
+  :root {
+    font-size: 7px;
+  }
+}
+
+@media (width <=660px) or (height <=700px) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+@media (width <=550px) or (height <=620px) {
+  :root {
+    font-size: 5px;
+  }
+}
+
+@media (width <=450px) or (height <=480px) {
+  :root {
+    font-size: 4px;
+  }
+}
+
+@media (width <=365px) or (height <=380px) {
+  :root {
+    font-size: 3px;
+  }
+}
+
+@media (width <=275px) or (height <=290px) {
+  :root {
+    font-size: 2.8px;
+  }
+}
